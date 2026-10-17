@@ -1,30 +1,34 @@
-function Footer() {
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
   return (
-    <footer className="text-white py-3 border-top w-100" style={{ backgroundColor: "#18181b", borderColor: "#27272a" }}>
+    <footer className="bg-dark text-light pt-4 pb-3 mt-auto border-top border-secondary">
       <div className="container">
-        <div className="row g-3">
+        <div className="row g-4">
           <div className="col-md-6">
-            <h6 className="fw-bold mb-2" style={{ color: "#ef4444" }}>Links</h6>
-            <ul className="list-unstyled small mb-0">
-              <li><a href="#" className="text-light text-decoration-none">Home</a></li>
-              <li><a href="#" className="text-light text-decoration-none">Computer Science</a></li>
-              <li><a href="#" className="text-light text-decoration-none">Courses</a></li>
-              <li><a href="#" className="text-light text-decoration-none">Reports</a></li>
+            <h6 className="text-danger fw-bold mb-3">Links</h6>
+            <ul className="list-unstyled small d-flex flex-column gap-2 mb-0">
+              <li><Link to="/" className="text-light text-decoration-none">Dashboard / Home</Link></li>
+              <li><Link to="/students" className="text-light text-decoration-none">Student Directory</Link></li>
+              <li><Link to="/courses" className="text-light text-decoration-none">Courses</Link></li>
+              <li><Link to="/reports" className="text-light text-decoration-none">Reports</Link></li>
             </ul>
           </div>
           <div className="col-md-6">
-            <h6 className="fw-bold mb-2" style={{ color: "#ef4444" }}>Contact Info</h6>
-            <p className="text-light small mb-1">Contact Us</p>
-            <p className="text-light small mb-1">+92: 123 456 7890</p>
-            <p className="text-light small mb-0">khizi@studentportal.com</p>
+            <h6 className="text-danger fw-bold mb-3">Contact Info</h6>
+            <p className="small text-light mb-1">SZABIST Student Portal Support</p>
+            <p className="small text-light mb-1">📞 +92: 123 456 7890</p>
+            <p className="small text-light mb-0">✉️ khizi@studentportal.com</p>
           </div>
         </div>
-        <div className="text-center text-light small mt-2 pt-2 border-top border-secondary opacity-75">
+        <hr className="border-secondary my-3" />
+        <p className="text-center text-light small mb-0">
           © 2026 StudentPortal. All rights reserved.
-        </div>
+        </p>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
